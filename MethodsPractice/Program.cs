@@ -60,10 +60,15 @@ namespace MethodsPractice
             //RetirementCalculator(userAge);
 
             //ex. WageCalculator
-            double hoursWorked = 42.3;
-            double hourlyWage = 12.50;
-            Console.WriteLine("Your monthly wage is {0}.",  WageCalculator(hoursWorked, hourlyWage));
+            //double hoursWorked = 42.3;
+            //double hourlyWage = 12.50;
+            //Console.WriteLine("Your monthly wage is {0}.",  WageCalculator(hoursWorked, hourlyWage));
+            //{0} refers to the first index after the comma
 
+            //ex. CodingJobPrep
+            double codingTime = 50 * 10;
+            double interviewTime = 10;
+            Console.WriteLine("Estimated time involved in preparing for coding job at WCCI is {0} hours.", CodingJobPrep(codingTime, interviewTime));
             
         }
 
@@ -149,8 +154,22 @@ namespace MethodsPractice
             //This method should calculate the MONTHLY wage
             double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
             return monthlyWage;
-
         }
+
+        //Create two methods of your choosing. At least one of the methods should have a non-void return type.
+        //Both of these methods should take at least one parameter.
+        //Remember when naming your method that it should represent what your method does.
+        //Your method should only aim to accomplish one thing.
+        //Be Creative
+
+        public static double CodingJobPrep(double daysToGraduation, double hoursOfJobInterviews)
+        {
+            double codingInter = (daysToGraduation * 10);
+            double     hoursOfJobInterviews);
+            return hoursOfPrep;
+           
+        }
+
 
         
     }
