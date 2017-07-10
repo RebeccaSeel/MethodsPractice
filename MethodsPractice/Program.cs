@@ -48,8 +48,23 @@ namespace MethodsPractice
 
             //Console.WriteLine("My future vehicle is {0} and Jordan's future vehicle {1}.", myVehicle, myFriendVehicle);
 
+            //ex. FavoriteFood
+            //FavoriteFood("Jay", "ice cream");
+            //FavoriteFood("Becky", "cake");
 
+            //ex. RetirementCalculator
+            //RetirementCalculator(34);
 
+            //Console.WriteLine("Enter your age: ");
+            //int userAge = int.Parse(Console.ReadLine());
+            //RetirementCalculator(userAge);
+
+            //ex. WageCalculator
+            double hoursWorked = 42.3;
+            double hourlyWage = 12.50;
+            Console.WriteLine("Your monthly wage is {0}.",  WageCalculator(hoursWorked, hourlyWage));
+
+            
         }
 
         //Access Modifier - Return Type - Method Name (in Pascal Case) - Parentheses (sometimes with parameters - may function
@@ -105,7 +120,38 @@ namespace MethodsPractice
             return vehicleFortune;
         }
 
+        //Create a method called FavoriteFood
+        //It should take two string parameters. One representing a name, and the other representing a favorite food.
+        //The return type should be void.
+        //The method should concatenate
 
+        public static void FavoriteFood(string name, string favFood)
+        {
+            Console.WriteLine(name + " prefers " + favFood);
+        }
 
+        //Create a method called RetirementCalculator
+        //It should take an int as a parameter representing the user's age
+        //The method should calculate how many more years until the user retires using 65 as the age of retirement.
+        //The return type should be void
+        //Once it calculates the user's retirement age it should print
+        //"The user will retire in X years" where x represents the value that was calculated
+
+        public static void RetirementCalculator(int userAge)
+        {
+            int retireYrs = 65 - userAge;
+            Console.WriteLine("The user will retire in " + retireYrs + " years");
+            //return retireYrs;
+        }
+
+        public static double WageCalculator(double hoursWorkedWeekly, double hourlyWage)
+        {
+            //This method should calculate the MONTHLY wage
+            double monthlyWage = (hoursWorkedWeekly * 52 * hourlyWage) / 12;
+            return monthlyWage;
+
+        }
+
+        
     }
 }
