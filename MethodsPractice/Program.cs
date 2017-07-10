@@ -66,7 +66,7 @@ namespace MethodsPractice
             //{0} refers to the first index after the comma
 
             //ex. CodingJobPrep
-            double codingTime = 50 * 10;
+            double codingTime = 64;
             double interviewTime = 10;
             Console.WriteLine("Estimated time involved in preparing for coding job at WCCI is {0} hours.", CodingJobPrep(codingTime, interviewTime));
             
@@ -164,11 +164,11 @@ namespace MethodsPractice
 
         public static double CodingJobPrep(double daysToGraduation, double hoursOfJobInterviews)
         {
-            double codingInter = (daysToGraduation * 10);
-            double     hoursOfJobInterviews);
+            double hoursOfPrep = ((daysToGraduation * 10) + hoursOfJobInterviews);
             return hoursOfPrep;
            
         }
+
 
 
         
