@@ -19,18 +19,34 @@ namespace MethodsPractice
             //This means a method will NEVER be created inside another method or member of the class.
             //However, methods are frequently CALLED inside of another class or method.
 
+            //Best practice - methods should be placed BELOW the Main method. 
+
             //ex. 1 call or invoke the Add method from below
 
-            Console.WriteLine("Hello. Please enter the first number to be added.");
-            int numberOne = int.Parse(Console.ReadLine());
-            Console.WriteLine("Please enter the second number to be added.");
-            int numberTwo = int.Parse(Console.ReadLine());
-            int answer = Add(numberOne, numberTwo); //these variables names can be different as long as they are ints
-            Console.WriteLine("The sum of your two numbers is " + answer);
+            //Console.WriteLine("Hello. Please enter the first number to be added.");
+            //int numberOne = int.Parse(Console.ReadLine());
+            //Console.WriteLine("Please enter the second number to be added.");
+            //int numberTwo = int.Parse(Console.ReadLine());
+            //int answer = Add(numberOne, numberTwo); //these variables names can be different as long as they are ints
+            //Console.WriteLine("The sum of your two numbers is " + answer);
 
             //ex. 2 call or invoke the Add method from below
             //int answer = Add(5, 7);
             //Console.WriteLine(answer);
+
+            //ex. 3 call the robotwarning
+            //RobotWarning("Will Robinson");
+
+            //ex. 4 call Useless
+            //Useless(); //prints "blah, blah, blah"
+
+            //ex. 5 call Vehicle
+            //string myBirthMonth = "September";
+            //string myFriendBirthMonth = "December";
+            //string myVehicle = Vehicle(myBirthMonth);
+            //string myFriendVehicle = Vehicle(myFriendBirthMonth);
+
+            //Console.WriteLine("My future vehicle is {0} and Jordan's future vehicle {1}.", myVehicle, myFriendVehicle);
 
 
 
@@ -60,8 +76,36 @@ namespace MethodsPractice
 
         //if you have a method that does not have a return value, you would use keyword "void".
         //When we have a "void" return type we DON'T need to use the keyword "return".
+        //no calculation, just uses it without taking an action such as add, multiple, etc.
         
-        //Best practice - methods should be placed BELOW the Main method. 
+        //Example RobotWarning
+        public static void RobotWarning(string name)
+        {
+            Console.WriteLine("Danger, " + name + "!!");
+        }
+
+        //Example Useless
+        public static void Useless()
+        {
+            Console.WriteLine("Blah blah blah");
+        }
+
+        //Example Vehicle - building a string
+        public static string Vehicle(string birthMonth)
+        {
+            string vehicleFortune;
+            if (birthMonth.ToUpper() == "SEPTEMBER" || birthMonth.ToUpper() == "OCTOBER")
+            {
+                vehicleFortune = "Hoverboard";
+            }
+            else
+            {
+                vehicleFortune = "SUV";
+            }
+            return vehicleFortune;
+        }
+
+
 
     }
 }
